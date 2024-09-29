@@ -25,7 +25,7 @@ const Cart = () => {
             <div>
               <div className="cart-items-title cart-items-item">
                 <img
-                  src={url+"/images/"+item.image}
+                  src={item.image}
                   alt={item.name}
                   className="cart-items-img"
                 />
