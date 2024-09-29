@@ -5,7 +5,8 @@ import { createContext, useEffect, useState } from "react";
 export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
-  const url = "http://localhost:5555";
+  //const url = "http://localhost:5555";
+  const url= "https://food-delivery-backend-flax.vercel.app";
   const [food_list, setFoodList] = useState([]);
   const [cartitems, setcartitems] = useState(0);
   const updateToken = (newToken, id) => {
@@ -13,7 +14,7 @@ const StoreContextProvider = (props) => {
     localStorage.setItem("token", newToken);
   };
   const fetchFoodList = async () => {
-    const response = await axios.get("http://localhost:5555/food/listFood");
+    const response = await axios.get("https://food-delivery-backend-flax.vercel.app/food/listFood");
     setFoodList(response.data.data);
   };
 
