@@ -19,7 +19,7 @@ function Signup() {
   }
   const register=async(event)=>{
     event.preventDefault();
-    const response=await axios.post("http://localhost:5555/users/sign-up",data);
+    const response=await axios.post("https://food-delivery-backend-flax.vercel.app/users/sign-up",data);
     if(response){
        navigate("/sign-in")
     }else{
